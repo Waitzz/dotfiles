@@ -18,4 +18,12 @@ else
     echo "💡 Mise is not installed or already removed."
 fi
 
+echo "🧹 Cleaning up Neovim configuration..."
+NVIM_DIR="$HOME/.config/nvim"
+
+if [ -d "$NVIM_DIR" ]; then
+    echo "🗑️  Removing Neovim configuration..."
+    rm -rf "$NVIM_DIR"
+fi
+
 echo "✨ Teardown completed successfully!"

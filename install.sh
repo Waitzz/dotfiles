@@ -27,4 +27,16 @@ echo "🔗 Invoking Dotter to deploy configuration modules..."
 
 mise exec -- dotter deploy --force
 
+echo "📦 Deploying Neovim configuration..."
+NVIM_DIR="$HOME/.config/nvim"
+
+if [ -d "$NVIM_DIR" ]; then
+    echo "⚠️  Existing Neovim configuration found. Removing..."
+    rm -rf "$NVIM_DIR"
+fi
+
+mkdir -p "$HOME/.config"
+echo "📥 Cloning Neovim configuration from GitHub..."
+git clone https://github.com/Waitzz/nvim "$NVIM_DIR"
+
 echo "✨ Bootstrap completed successfully!"
