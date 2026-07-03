@@ -1,0 +1,14 @@
+[tools]
+usage = "latest"
+tree-sitter = "latest"
+"npm:mcp-hub" = "latest"
+neovim = "latest"
+"github:SuperCuber/dotter" = "latest"
+
+[tools.node]
+version = "lts"
+postinstall = '''
+    mkdir -p ~/.local/share/bash-completion/completions
+    npm completion > ~/.local/share/bash-completion/completions/npm
+    node --completion-bash > ~/.local/share/bash-completion/completions/node
+'''

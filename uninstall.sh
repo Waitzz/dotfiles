@@ -2,8 +2,6 @@
 
 set -e
 
-DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
 echo "🧹 Starting dotfiles teardown process..."
 
 if command -v mise >/dev/null 2>&1; then

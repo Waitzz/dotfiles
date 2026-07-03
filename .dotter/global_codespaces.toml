@@ -1,0 +1,5 @@
+[mise.files]
+"mise/mise_codespaces.toml" = "~/.config/mise/config.toml"
+
+[bash.files]
+"bash/.bash_aliases" = "~/.bash_aliases"
