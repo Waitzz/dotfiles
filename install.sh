@@ -21,6 +21,7 @@ cd "$DOTFILES_DIR"
 
 eval "$(mise activate bash)"
 
+mise trust "$DOTFILES_DIR"
 mise install
 
 echo "🔗 Invoking Dotter to deploy configuration modules..."
