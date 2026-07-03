@@ -19,8 +19,6 @@ fi
 echo "🛠️  Installing tools based on .mise.toml..."
 cd "$DOTFILES_DIR"
 
-eval "$(mise activate bash)"
-
 mise trust "$DOTFILES_DIR"
 mise install
 
