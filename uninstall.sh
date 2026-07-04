@@ -14,6 +14,12 @@ if command -v mise >/dev/null 2>&1; then
 
     echo "🗑️  Purging Mise environment and all installed tools..."
     yes | mise implode
+
+    BASH_COMP_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/mise-completions"
+    if [ -e "$BASH_COMP_DIR" ]; then
+        echo "🗑️  Removing mise bash completions..."
+        rm -rf "$BASH_COMP_DIR"
+    fi
 else
     echo "💡 Mise is not installed or already removed."
 fi

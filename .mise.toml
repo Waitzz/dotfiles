@@ -1,14 +1,11 @@
 [tools]
 usage = "latest"
+node = "lts"
 tree-sitter = "latest"
 "npm:mcp-hub" = "latest"
 neovim = "latest"
 "github:SuperCuber/dotter" = "latest"
+"github:alltuner/mise-completions-sync" = "latest"
 
-[tools.node]
-version = "lts"
-postinstall = '''
-    mkdir -p ~/.local/share/bash-completion/completions
-    npm completion > ~/.local/share/bash-completion/completions/npm
-    node --completion-bash > ~/.local/share/bash-completion/completions/node
-'''
+[hooks]
+postinstall = "misecompsync --shell bash"
