@@ -1,6 +1,12 @@
 [tools]
-usage = "latest"
 node = "lts"
+rust = "latest"
+usage = "latest"
+fd = "latest"
+gh = "latest"
+bat = "latest"
+ripgrep = "latest"
+delta = "latest"
 tree-sitter = "latest"
 "npm:mcp-hub" = "latest"
 neovim = "latest"
