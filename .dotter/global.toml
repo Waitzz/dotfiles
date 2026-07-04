@@ -1,5 +1,5 @@
 [mise.files]
-".mise.toml" = "~/.config/mise/config.toml"
+"mise.toml" = "~/.config/mise/config.toml"
 
 [bash.files]
-"bash/.bash_aliases" = "~/.bash_aliases"
+"bash/bash_aliases" = "~/.bash_aliases"
