@@ -1,3 +1,10 @@
+#!/usr/bin/env bash
+
+# add local bin to PATH
+if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
 # history search
 if [[ $- == *i* ]]; then
     bind '"\e[A": history-search-backward'
