@@ -9,3 +9,4 @@
 
 [tmux.files]
 "tmux/tmux.conf" = "~/.tmux.conf"
+"tmux/gitmux.conf" = "~/.gitmux.conf"

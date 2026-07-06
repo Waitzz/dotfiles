@@ -13,6 +13,7 @@ tree-sitter = "latest"
 neovim = "latest"
 "github:SuperCuber/dotter" = "latest"
 "github:alltuner/mise-completions-sync" = "latest"
+"github:arl/gitmux" = "latest"
 
 [hooks]
 postinstall = "misecompsync --shell bash"
