@@ -1,1 +1,1 @@
-packages = ["mise", "bash"]
+packages = ["mise", "bash", "readline"]

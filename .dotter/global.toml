@@ -3,3 +3,6 @@
 
 [bash.files]
 "bash/.bash_aliases" = "~/.bash_aliases"
+
+[readline.files]
+"readline/.inputrc" = "~/.inputrc"
