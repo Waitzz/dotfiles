@@ -1,5 +1,6 @@
 [tools]
 node = "lts"
+tmux = "latest"
 rust = "latest"
 usage = "latest"
 fd = "latest"

@@ -6,3 +6,6 @@
 
 [readline.files]
 "readline/.inputrc" = "~/.inputrc"
+
+[tmux.files]
+"tmux/tmux.conf" = "~/.tmux.conf"
