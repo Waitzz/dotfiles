@@ -1,1 +1,1 @@
-packages = ["mise", "bash", "readline", "tmux"]
+packages = ["mise", "bash", "readline", "tmux", "git"]
