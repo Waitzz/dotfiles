@@ -20,7 +20,7 @@ echo "🛠️  Installing tools based on .mise.toml..."
 cd "$DOTFILES_DIR"
 
 mise trust "$DOTFILES_DIR"
-mise install
+mise install --yes
 
 echo "🔧 Setting up mise bash completions..."
 
