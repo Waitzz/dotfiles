@@ -28,9 +28,9 @@ BASH_COMP_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/mise-completions"
 mkdir -p $BASH_COMP_DIR/bash
 mise completion bash --include-bash-completion-lib >$BASH_COMP_DIR/bash/mise
 
-echo "🔗 Invoking Dotter to deploy configuration modules..."
+echo "🔗 Invoking mise bootstrap dotfiles to deploy configuration modules..."
 
-mise exec -- dotter deploy --force
+mise bootstrap dotfiles apply --yes --force
 
 echo "📦 Deploying Neovim configuration..."
 NVIM_DIR="$HOME/.config/nvim"

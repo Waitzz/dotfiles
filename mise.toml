@@ -11,9 +11,19 @@ delta = "latest"
 tree-sitter = "latest"
 "npm:mcp-hub" = "latest"
 neovim = "latest"
-"github:SuperCuber/dotter" = "latest"
 "github:alltuner/mise-completions-sync" = "latest"
 "github:arl/gitmux" = "latest"
 
 [hooks]
 postinstall = "misecompsync --shell bash"
+
+[settings]
+dotfiles.root = "."
+
+[dotfiles]
+"~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
+"~/.bash_aliases"            = { source = "bash/.bash_aliases", mode = "symlink" }
+"~/.inputrc"                 = { source = "readline/.inputrc", mode = "symlink" }
+"~/.tmux.conf"               = { source = "tmux/tmux.conf", mode = "symlink" }
+"~/.gitmux.conf"             = { source = "tmux/gitmux.conf", mode = "symlink" }
+"~/.gitconfig"               = { source = "git/.gitconfig", mode = "symlink" }

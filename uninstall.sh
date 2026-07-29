@@ -7,9 +7,9 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo "🧹 Starting dotfiles teardown process..."
 
 if command -v mise >/dev/null 2>&1; then
-    echo "🔗 Invoking Dotter to safely remove symlinks and restore backups..."
-    if ! mise exec -- dotter undeploy; then
-        echo "⚠️ Dotter undeploy failed or not installed in Mise. Skipping configuration undeploy."
+    echo "🔗 Invoking mise bootstrap dotfiles to safely remove symlinks..."
+    if ! mise bootstrap dotfiles unapply --yes --force; then
+        echo "⚠️ mise bootstrap dotfiles unapply failed. Skipping configuration undeploy."
     fi
 
     echo "🗑️  Purging Mise environment and all installed tools..."
