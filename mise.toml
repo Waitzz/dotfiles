@@ -19,6 +19,7 @@ postinstall = "misecompsync --shell bash"
 
 [settings]
 dotfiles.root = "."
+npm.package_manager = "npm"
 
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
