@@ -13,6 +13,10 @@ tree-sitter = "latest"
 neovim = "latest"
 "github:alltuner/mise-completions-sync" = "latest"
 "github:arl/gitmux" = "latest"
+pixi = { version = "latest", postinstall = """
+mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/mise-completions/bash"
+pixi completion --shell bash > "${XDG_DATA_HOME:-$HOME/.local/share}/mise-completions/bash/pixi"\
+""" }
 
 [hooks]
 postinstall = "misecompsync --shell bash"
@@ -23,8 +27,8 @@ npm.package_manager = "npm"
 
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
-"~/.bash_aliases"            = { source = "bash/.bash_aliases", mode = "symlink" }
-"~/.inputrc"                 = { source = "readline/.inputrc", mode = "symlink" }
-"~/.tmux.conf"               = { source = "tmux/tmux.conf", mode = "symlink" }
-"~/.gitmux.conf"             = { source = "tmux/gitmux.conf", mode = "symlink" }
-"~/.gitconfig"               = { source = "git/.gitconfig", mode = "symlink" }
+"~/.bash_aliases" = { source = "bash/.bash_aliases", mode = "symlink" }
+"~/.inputrc" = { source = "readline/.inputrc", mode = "symlink" }
+"~/.tmux.conf" = { source = "tmux/tmux.conf", mode = "symlink" }
+"~/.gitmux.conf" = { source = "tmux/gitmux.conf", mode = "symlink" }
+"~/.gitconfig" = { source = "git/.gitconfig", mode = "symlink" }

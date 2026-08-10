@@ -5,6 +5,11 @@ if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
+# add pixi bin to PATH
+if [[ ":$PATH:" != *":$HOME/.pixi/bin:"* ]]; then
+    export PATH="$HOME/.pixi/bin:$PATH"
+fi
+
 # history search
 if [[ $- == *i* ]]; then
     bind '"\e[A": history-search-backward'
