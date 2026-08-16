@@ -24,6 +24,13 @@ else
     echo "💡 Mise is not installed or already removed."
 fi
 
+PIXI_COMP_LINK="$HOME/.pixi/share/bash-completion/completions"
+if [ -L "$PIXI_COMP_LINK" ] || [ -e "$PIXI_COMP_LINK" ]; then
+    echo "🗑️  Removing Pixi completions bridge..."
+    rm -f "$PIXI_COMP_LINK"
+    rmdir "$HOME/.pixi/share/bash-completion" 2>/dev/null || true
+fi
+
 echo "🧹 Cleaning up Neovim configuration..."
 NVIM_DIR="$HOME/.config/nvim"
 

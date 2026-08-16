@@ -32,6 +32,12 @@ echo "🔗 Invoking mise bootstrap dotfiles to deploy configuration modules..."
 
 mise bootstrap dotfiles apply --yes --force
 
+echo "🔗 Setting up Pixi completions bridge..."
+mkdir -p "$HOME/.pixi/completions/bash"
+mkdir -p "$HOME/.pixi/share/bash-completion"
+
+ln -sfn "$HOME/.pixi/completions/bash" "$HOME/.pixi/share/bash-completion/completions"
+
 echo "📦 Deploying Neovim configuration..."
 NVIM_DIR="$HOME/.config/nvim"
 
