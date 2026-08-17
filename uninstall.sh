@@ -31,6 +31,14 @@ if [ -L "$PIXI_COMP_LINK" ] || [ -e "$PIXI_COMP_LINK" ]; then
     rmdir "$HOME/.pixi/share/bash-completion" 2>/dev/null || true
 fi
 
+if command -v x >/dev/null 2>&1 || [ -d "$HOME/.x-cmd.root" ]; then
+    echo "🗑️  Uninstalling x-cmd..."
+    if command -v x >/dev/null 2>&1; then
+        x boot clear || true
+    fi
+    rm -rf "$HOME/.x-cmd.root"
+fi
+
 echo "🧹 Cleaning up Neovim configuration..."
 NVIM_DIR="$HOME/.config/nvim"
 

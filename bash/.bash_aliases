@@ -34,6 +34,11 @@ if [[ -n "$CONDA_PREFIX" && -d "$CONDA_PREFIX/share" ]]; then
     fi
 fi
 
+# boot up x-cmd
+if [[ -f "$HOME/.x-cmd.root/X" ]]; then
+    . "$HOME/.x-cmd.root/X"
+fi
+
 # mise activate
 if command -v mise >/dev/null 2>&1; then
     eval "$(mise activate bash --shims)"

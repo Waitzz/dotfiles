@@ -38,6 +38,14 @@ mkdir -p "$HOME/.pixi/share/bash-completion"
 
 ln -sfn "$HOME/.pixi/completions/bash" "$HOME/.pixi/share/bash-completion/completions"
 
+echo "📦 Installing x-cmd..."
+if ! command -v x >/dev/null 2>&1; then
+    eval "$(curl https://get.x-cmd.com)"
+    x boot clear || true
+else
+    echo "💡 x-cmd is already installed, skipping download."
+fi
+
 echo "📦 Deploying Neovim configuration..."
 NVIM_DIR="$HOME/.config/nvim"
 
