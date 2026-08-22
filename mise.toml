@@ -32,3 +32,4 @@ npm.package_manager = "npm"
 "~/.tmux.conf" = { source = "tmux/tmux.conf", mode = "symlink" }
 "~/.gitmux.conf" = { source = "tmux/gitmux.conf", mode = "symlink" }
 "~/.gitconfig" = { source = "git/.gitconfig", mode = "symlink" }
+"~/.prettierrc" = { source = "prettier/.prettierrc", mode = "symlink" }
