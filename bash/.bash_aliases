@@ -39,7 +39,7 @@ if [[ -f "$HOME/.x-cmd.root/X" ]]; then
     . "$HOME/.x-cmd.root/X"
 fi
 
-# mise activate
-if command -v mise >/dev/null 2>&1; then
-    eval "$(mise activate bash --shims)"
+# add mise shims to PATH
+if [[ ":$PATH:" != *":$HOME/.local/share/mise/shims:"* ]]; then
+    export PATH="$HOME/.local/share/mise/shims:$PATH"
 fi
