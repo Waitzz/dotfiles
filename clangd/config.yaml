@@ -1,0 +1,29 @@
+Completion:
+    HeaderInsertion: Never
+
+CompileFlags:
+    Add:
+        - -Qunused-arguments
+        - -Wno-unknown-warning-option
+    Remove:
+        - -mthumb-interwork
+        - -mno-thumb-interwork
+        - -mword-relocations
+        - -mstack-protector-guard*
+        - -mbranch-protection=*
+        - -mabi=lp64*
+        - -mabi=apcs*
+        - -mabi=aapcs-linux
+        - -fconserve-stack
+        - -fno-allow-store-data-races
+        - -fno-ipa-sra
+        - -fno-guess-branch-probability
+        - -fstack-usage
+        - -fno-var-tracking*
+        - -femit-struct-debug-baseonly
+        - -Wa,*
+        - -Werror*
+
+Diagnostics:
+    ClangTidy:
+        Remove: "*"
