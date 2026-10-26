@@ -1,3 +1,10 @@
+[vars]
+proxy_extra = ""
+
+[env]
+no_proxy = "127.0.0.1,localhost,::1{{ vars.proxy_extra }}"
+NO_PROXY = "{{ env.no_proxy }}"
+
 [tools]
 node = "lts"
 tmux = "latest"
