@@ -14,6 +14,7 @@ fd = "latest"
 gh = "latest"
 bat = "latest"
 ripgrep = "latest"
+lazygit = "latest"
 delta = "latest"
 tree-sitter = "latest"
 neovim = "latest"
@@ -40,3 +41,4 @@ npm.package_manager = "npm"
 "~/.gitconfig" = { source = "git/.gitconfig", mode = "symlink" }
 "~/.prettierrc" = { source = "prettier/.prettierrc", mode = "symlink" }
 "~/.config/clangd/config.yaml" = { source = "clangd/config.yaml", mode = "symlink" }
+"~/.config/lazygit/config.yml" = { source = "lazygit/config.yml", mode = "symlink" }

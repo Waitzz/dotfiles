@@ -1,0 +1,9 @@
+git:
+  diffRenderers:
+    - name: delta
+      command: delta --{{colorScheme}} --paging=never
+    - name: difftastic
+      type: extDiff
+      command: difft --color=always --background={{colorScheme}} --context={{diffContext}}
+    - type: rawGit
+      name: default
